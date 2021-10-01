@@ -271,3 +271,8 @@ ul {
 .datepicker-plot-area {
     font-family: 'Vazir', sans-serif;
 }
+
+.router-link-exact-active{
+    background-color: #007bff !important;
+    color: white !important;
+}

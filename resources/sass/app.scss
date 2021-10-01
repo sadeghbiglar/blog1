@@ -6,3 +6,10 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+//
+
+
+.router-link-exact-active{
+    background-color: #007bff !important;
+    color: white !important;
+}

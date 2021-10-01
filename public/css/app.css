@@ -10002,3 +10002,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.router-link-exact-active {
+  background-color: #007bff !important;
+  color: white !important;
+}

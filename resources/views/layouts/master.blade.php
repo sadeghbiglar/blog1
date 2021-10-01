@@ -24,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- template rtl version -->
     <link rel="stylesheet" href="{{asset('dist/css/custom-style.css')}}">
 
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
@@ -99,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#" class="nav-link ">
                                         <i class="fa fa-circle-o nav-icon"></i>
                                         <p>صفحه فعال</p>
                                     </a>
