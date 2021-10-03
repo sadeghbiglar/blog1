@@ -8,6 +8,10 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+
+//import vform
+import{Form} from "vform";
+window.Form=Form;
 // add vue-router
 
 //import Vue from 'vue'
@@ -17,13 +21,54 @@ Vue.use(VueRouter)
 
 let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
-    { path: '/profile', component: require('./components/Profile.vue').default }
+    { path: '/profile', component: require('./components/Profile.vue').default },
+    { path: '/users', component: require('./components/Users.vue').default },
 ]
 
 const router = new VueRouter({
     mode:'history',
     routes // short for `routes: routes`
 })
+//import moment
+import moment from "moment";
+
+Vue.filter('propper',function (text){
+    return text.charAt(0).toUpperCase()+text.slice(1)
+})
+
+
+
+Vue.filter('formatDate',function (created){
+    return moment(created).format('YYYY MM DD');
+})
+// Import Progressbar
+
+import VueProgressBar from 'vue-progressbar';
+
+Vue.use(VueProgressBar, {
+    color: 'rgb(143, 255, 199)',
+    failedColor: 'red',
+    height: '5px'
+})
+
+// import SweetAlert
+import Swal from 'sweetalert2'
+window.Swal=Swal;
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'bottom-start',
+    showConfirmButton: false,
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
+window.Toast=Toast;
+// import fire customevent $emit
+
+window.Fire=new Vue();
 
 /**
  * The following block of code may be used to automatically register your
