@@ -23,6 +23,8 @@ let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/users', component: require('./components/Users.vue').default },
+    { path: '/centers', component: require('./components/Centers.vue').default },
+    { path: '/report', component: require('./components/Report.vue').default },
 ]
 
 const router = new VueRouter({
